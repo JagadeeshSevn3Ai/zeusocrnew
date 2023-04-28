@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/zeusocrnew/static/css/main.9585ca07.css",
+    "main.js": "/zeusocrnew/static/js/main.a1463547.js",
+    "static/js/498.4d02abbd.chunk.js": "/zeusocrnew/static/js/498.4d02abbd.chunk.js",
+    "static/js/703.e4942185.chunk.js": "/zeusocrnew/static/js/703.e4942185.chunk.js",
+    "static/js/513.81e9fe7e.chunk.js": "/zeusocrnew/static/js/513.81e9fe7e.chunk.js",
+    "static/js/787.a49e9e1d.chunk.js": "/zeusocrnew/static/js/787.a49e9e1d.chunk.js",
+    "pdf.worker.js": "/zeusocrnew/e7e915313973ba1d49f9bb2a1998626e.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/zeusocrnew/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/boare_ai-logo_white.jpg": "/zeusocrnew/static/media/boare_ai-logo_white.b09024b3f8786ba16593.jpg",
+    "static/media/fontawesome-webfont.eot": "/zeusocrnew/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/zeusocrnew/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/zeusocrnew/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/zeusocrnew/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/zeusocrnew/index.html",
+    "main.9585ca07.css.map": "/zeusocrnew/static/css/main.9585ca07.css.map",
+    "main.a1463547.js.map": "/zeusocrnew/static/js/main.a1463547.js.map",
+    "498.4d02abbd.chunk.js.map": "/zeusocrnew/static/js/498.4d02abbd.chunk.js.map",
+    "703.e4942185.chunk.js.map": "/zeusocrnew/static/js/703.e4942185.chunk.js.map",
+    "513.81e9fe7e.chunk.js.map": "/zeusocrnew/static/js/513.81e9fe7e.chunk.js.map",
+    "787.a49e9e1d.chunk.js.map": "/zeusocrnew/static/js/787.a49e9e1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9585ca07.css",
+    "static/js/main.a1463547.js"
+  ]
+}
