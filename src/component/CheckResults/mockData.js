@@ -1,8 +1,8 @@
 export const mockData = {
   "Seller Name(s)": "CELEENA AJODHA and NAIPAUL AJODHA",
   "Buyer Names(s)": "Lien Thi Bich Pham and Tuan Trong Truong",
-  Address: "3134 NW 109th Ter, Sunrise, FL 33351",
-  County: "Broward County",
+  "Address": "3134 NW 109th Ter, Sunrise, FL 33351",
+  "County": "Broward County",
   "Tax ID": "494119130100",
   "Purchase Price": "480,000.00",
   "Initial deposit amount": "5,000.00",

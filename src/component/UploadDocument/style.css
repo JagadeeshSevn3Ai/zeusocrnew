@@ -67,8 +67,8 @@
 
 
 check-input:checked {
-    background-color: #73bf45 !important;
-    border-color: #73bf45 !important;
+    background-color: #d80825 !important;
+    border-color: #d80825 !important;
 }
 .check-container input {
     margin-right: 5px;
@@ -82,15 +82,15 @@ check-input:checked {
 }
 
  .check-input-accept:checked {
-    background-color: #73bf45 !important;
-    border-color: #73bf45 !important;
+    background-color: #d80825 !important;
+    border-color: #d80825 !important;
  }
  .modal-confimr-header{
     display: flex;
     justify-content: space-between;
     padding: 11px 20px;
     border-radius: 5px 5px 0px 0px;
-    background-color: #73bf45;
+    background-color: #d80825;
     color: #fff;
  }
  .modal-confimr-header span {

@@ -6,7 +6,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        color: #73bf45;
+        /* color: #73bf45; */
+        color: #d80825;
 
         position: sticky;
         z-index: 999;
@@ -15,7 +16,7 @@
 }
 
 .header img {
-    width: 12%;
+    width: 5%;
         height: auto;
         object-fit: cover;
         background-repeat: no-repeat;
@@ -25,8 +26,9 @@
     display: flex;
     justify-content: space-between;
     background: white !important;
-    border: #73bf45;
-    color: #73bf45 !important;
+    border: #d80825;
+    /* color: #73bf45 !important; */
+    color: #d80825 !important;
     margin: 10px;
     border-width: 20px;
     border-radius: 25px;

@@ -5,7 +5,7 @@
     border-radius: 5px;
 }
 .form-check-container{
-  border: 1px solid #73bf45;
+  border: 1px solid #d80825;
   margin-right: 10px;
   padding: 10px;
   border-radius: 10px;
@@ -24,6 +24,6 @@
     cursor: pointer;
   }
   .form-check-input:checked {
-    background-color: #73bf45 !important;
-    border-color: #73bf45 !important;
+    background-color: #d80825 !important;
+    border-color: #d80825 !important;
   }

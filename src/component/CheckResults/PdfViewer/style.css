@@ -1,6 +1,6 @@
 .body {
   margin: 0;
-  background-color: #73bf45;
+  background-color: #d80825;
   font-family: Segoe UI, Tahoma, sans-serif;
 }
 
@@ -11,7 +11,7 @@
 
 .Pdf header {
   background-color: #323639;
-  box-shadow: 0 0 8px #73bf45;
+  box-shadow: 0 0 8px #d80825;
   padding: 20px;
   color: white;
 }

@@ -279,7 +279,7 @@ const onExportDataExcel = () => {
                 <strong>{uploadOrDownloadCount} %</strong>
               </div>
             </CircularProgressbarWithChildren>
-            ;
+            
           </div>
         </div>
       ) : (

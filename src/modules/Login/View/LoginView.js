@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import logo from "../../../images/boare_ai-logo_white.jpg";
+import logo from "../../../images/logo-1.png";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../../../authConfig";
 

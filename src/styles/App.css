@@ -43,12 +43,12 @@
 .btn-next{
   width: 72px;
   border-radius: 25px;
-  background: #73bf45 !important;
+  background: #d80825 !important;
   border: none !important;
   height: 45px;
 }
 .form-control:focus {
-  border-color: #73be45 !important;
+  border-color: #d80825 !important;
   box-shadow: 0 0 0 0.25rem rgb(115,190,69 / 25%) !important;
 }
 .error-section small {
@@ -56,7 +56,7 @@
 }
 .btn-common{
     /* width: 72px; */
-    background: #73bf45 !important;
+    background: #d80825 !important;
     border: none !important;
     color: #fff !important;
     margin: 10px;
@@ -77,7 +77,7 @@ margin-bottom: 20px;
 .btn-next1{
   width: 72px;
   border-radius: 25px;
-  background: #73bf45 !important;
+  background: #d80825 !important;
   border: none !important;
   height: 45px;
 }

@@ -9,12 +9,12 @@ const UplaodingDocView = (props) => {
       <Stepper
         steps={steps}
         activeStep={activeStep}
-        activeColor={"#73bf45"}
+        activeColor={"#d80825"}
         size={40}
         circleTop={50}
         circleFontSize={15}
-        completeBarColor={"#73bf45"}
-        completeColor={"#73bf45"}
+        completeBarColor={"#d80825"}
+        completeColor={"#d80825"}
       />
       {steps[activeStep].componenet}
       <div className="error-section">
