@@ -67,7 +67,7 @@ const UploadDocument = ({ selectedInfo, setSelectedInfo, setErrorMessage }) => {
     isDragReject } = useDropzone({
     accept: {
       // "image/*": [],
-      "application/pdf": [".pdf"],
+      "application/pdf": [".png",".jpg",".PNG",".jpeg"],
     },
     onDrop,
     multiple: false,

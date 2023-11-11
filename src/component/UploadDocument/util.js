@@ -1,4 +1,4 @@
-export const containerName = `pdffileuploadv1`;
+export const containerName = `testfiles`;
 export const sasToken = process.env.REACT_APP_STORAGESASTOKEN;
 export const storageAccountName = process.env.REACT_APP_STORAGERESOURCENAME; 
 

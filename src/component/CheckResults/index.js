@@ -18,6 +18,7 @@ import { arrayOfdata, mockData } from "./mockData";
 import { clear } from "@testing-library/user-event/dist/clear";
 
 const storageConfigured = isStorageConfigured();
+let filedat = "";
 
 const CheckResults = ({ selectedInfo }) => {
   const [fieldValue, setFieldValue] = useState("");
@@ -29,6 +30,7 @@ const CheckResults = ({ selectedInfo }) => {
   const [uploadResStatus, setUploadResStatus] = useState(0);
   const nextBtn = document.getElementById('next-btn');
   const backBtn = document.getElementById('back-btn');
+  
 
   // const timer = setInterval(() => {
   //   setUploadOrDownloadCount(
@@ -56,7 +58,8 @@ const CheckResults = ({ selectedInfo }) => {
   }, []);
   const delay = ms => new Promise(res => setTimeout(res, ms));
   const apiCalling = async (fileURL) => {
-    // console.log("fileUrl", fileURL);
+    filedat = fileURL;
+    console.log("fileUrl", filedat);
     axios({
       url: baseURL,
       method: "POST",
@@ -66,53 +69,77 @@ const CheckResults = ({ selectedInfo }) => {
         "Content-Type": "application/json",
       },
       // data: { name: selectedInfo.uploaded_file[0].name },
-      data: fileURL,
+      data: {"fileURL":fileURL},
     })
-      .then((res) => {
-        const getData = async () => {
-          const response = await axios.get(res.data.statusQueryGetUri, {
-            headers: {
-              Accept: "*/*",            
-              "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-              "Content-Type": "application/json",
-            }
-          }).catch(e => {
-            console.log(e);
-          });
+    .then((res) => {
+      console.log("data", res);
+      const tempArray = [];
+      let tempObj = {};
+      for (let key in res.data) {
+        if (res.data.hasOwnProperty(key)) {
+          tempObj = {
+            name: key,
+            value: res.data[key],
+          };
+          tempArray.push(tempObj);
+        }
+      }
+      console.log("tt", tempArray);
+      if (selectedInfo.data_points === "All data points") {
+        setInfo(tempArray);
+      } else {
+        let res = tempArray.filter((n) =>
+          selectedInfo.customDataArray.some((n2) => n.name === n2.name)
+        );
+        setInfo(res);
+      }
+      setWatingLoader(false);
+    })
+      // .then((res) => {
+      //   const getData = async () => {
+      //     const response = await axios.get(res.data.statusQueryGetUri, {
+      //       headers: {
+      //         Accept: "*/*",            
+      //         "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+      //         "Content-Type": "application/json",
+      //       }
+      //     }).catch(e => {
+      //       console.log(e);
+      //     });
 
-          if(response.data.runtimeStatus === 'Completed') {
-            setUploadOrDownloadCount(100);
-                await delay(5000);
-                setWatingLoader(false);
-                nextBtn.style.display = "block";
-                backBtn.style.display = "block";
-                const tempArray = [];
-                let tempObj = {};
-                for (let key in response.data.output) {
-                  if (response.data.output.hasOwnProperty(key)) {
-                    tempObj = {
-                      name: key,
-                      value: response.data.output[key],
-                    };
-                    tempArray.push(tempObj);
-                  }
-                }
-                setInfo(tempArray);
-                // console.log('tempArray', tempArray);
-                let arr = [];
-                for (const element of tempArray) {
-                  arr.push([element.value]);
-                }
-                setMarkWords(arr); 
-            clearInterval(checkResponse); 
-          }
-        };
+      //     if(response.data.runtimeStatus === 'Completed') {
+      //       setUploadOrDownloadCount(100);
+      //           await delay(5000);
+      //           setWatingLoader(false);
+      //           nextBtn.style.display = "block";
+      //           backBtn.style.display = "block";
+      //           const tempArray = [];
+      //           let tempObj = {};
+      //           for (let key in response.data.output) {
+      //             if (response.data.output.hasOwnProperty(key)) {
+      //               tempObj = {
+      //                 name: key,
+      //                 value: response.data.output[key],
+      //               };
+      //               tempArray.push(tempObj);
+      //             }
+      //           }
+      //           setInfo(tempArray);
+      //           // console.log('tempArray', tempArray);
+      //           let arr = [];
+      //           for (const element of tempArray) {
+      //             arr.push([element.value]);
+      //           }
+      //           setMarkWords(arr); 
+      //       clearInterval(checkResponse); 
+      //     }
+      //   };
   
-        const checkResponse = setInterval(() => {
-          getData();
-        }, 10000);
+      //   const checkResponse = setInterval(() => {
+      //     getData();
+      //   }, 10000);
        
-      })
+      // })
 
       // Catch errors if any
       .catch((err) => {
@@ -237,7 +264,7 @@ const onExportDataExcel = () => {
     if (!file) return [];
     // get BlobService = notice `?` is pulled out of sasToken - if created in Azure portal
     const blobService = new BlobServiceClient(
-      `https://pdffileupload.blob.core.windows.net/?${sasToken}`
+      `https://testfolder01.blob.core.windows.net/?${sasToken}`
     );
     // `https://rg01deva5c0.blob.core.windows.net/?${sasToken}`
     // get Container - full public read access
@@ -393,4 +420,5 @@ const onExportDataExcel = () => {
 };
 
 export default CheckResults;
+export {filedat};
 

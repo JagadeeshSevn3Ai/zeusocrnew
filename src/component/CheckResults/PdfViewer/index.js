@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import "./style.css";
+import {filedat} from "../../../component/CheckResults";
 
 const options = {
   cMapUrl: "cmaps/",
@@ -59,7 +60,9 @@ export const PdfViewer = ({ preview, setPreview, markWords }) => {
 
   return (
         <div className="Pdf__container__document">
-          <Document
+          <img src={filedat} alt="Example Image" width="500px"/>
+          {/* <img src={filedat} /> */}
+          {/* <Document
             file={file}
             onLoadSuccess={onDocumentLoadSuccess}
             options={options}
@@ -72,7 +75,7 @@ export const PdfViewer = ({ preview, setPreview, markWords }) => {
             // scale={0.95}
             // renderMode="svg"
             />
-          </Document>
+          </Document> */}
           <div className="bottom_section_pdf">
             <button
               type="button"
